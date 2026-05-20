@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercício 08</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function fatorial(n) {
+        let resultado = 1;
+
+        for (let i = 1; i <= n; i++) {
+          resultado *= i;
+        }
+
+        return resultado;
+      }
+
+      function calcularFatorial() {
+        let entrada = document.getElementById("txtNumeros").value;
+
+        let lista = entrada.split(",");
+
+        let resposta = [];
+
+        for (let i = 0; i < lista.length; i++) {
+          let numero = parseInt(lista[i]);
+
+          resposta.push(fatorial(numero));
+        }
+
+        document.write("O fatorial dos números: [" + entrada + "] é: " + "[" + resposta + "]");
+      }
+    </script>
+  </head>
+
+  <body>
+    Números: <input type="text" id="txtNumeros" />
+
+    <input type="button" value="Efetuar fatorial!" onclick="calcularFatorial()" />
+  </body>
+</html>

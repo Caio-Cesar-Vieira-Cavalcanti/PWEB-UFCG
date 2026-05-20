@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercício 09</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function estatistica() {
+        let entrada = document.getElementById("txtValores").value;
+
+        let lista = entrada.split(",");
+
+        let soma = 0;
+        let positivos = 0;
+        let negativos = 0;
+
+        for (let i = 0; i < lista.length; i++) {
+          let numero = parseInt(lista[i]);
+
+          soma += numero;
+
+          if (numero >= 0) {
+            positivos++;
+          } else {
+            negativos++;
+          }
+        }
+
+        let media = soma / lista.length;
+
+        let percPositivos = (positivos / lista.length) * 100;
+        let percNegativos = (negativos / lista.length) * 100;
+
+        document.write(
+          "Média: " +
+            media +
+            "<br>" +
+            "Positivos: " +
+            positivos +
+            "<br>" +
+            "Negativos: " +
+            negativos +
+            "<br>" +
+            "Percentual positivos: " +
+            percPositivos.toFixed(2) +
+            "%<br>" +
+            "Percentual negativos: " +
+            percNegativos.toFixed(2) +
+            "%",
+        );
+      }
+    </script>
+  </head>
+
+  <body>
+    Valores: <input type="text" id="txtValores" />
+
+    <input type="button" value="Efetuar estatística!" onclick="estatistica()" />
+  </body>
+</html>

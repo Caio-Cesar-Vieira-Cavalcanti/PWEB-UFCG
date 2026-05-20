@@ -1,0 +1,96 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    border: 4px dashed #333; 
+}
+
+header {
+    margin-left: 5%
+}
+
+ul {
+    list-style-type: "- ";
+    padding-left: 10px;
+}
+
+li {
+    padding-bottom: 6px;
+}
+
+footer {
+    background-color: orange;
+    padding: 50px 0;
+    margin-bottom: 50px;
+    text-align: center;
+
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.blog {
+    padding: 8px 0;
+}
+
+.cabecalho {
+    background-color: lightskyblue;
+    padding: 50px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 24px;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    margin-right: 5%;
+}
+
+.principal {
+    display: flex;
+    flex: 1;
+    margin-left: 5%;
+}
+
+.lado-esquerdo {
+    width: 75%;
+    padding-right: 2em;
+}
+
+.lado-direito {
+    background-color: lightgreen;
+    width: 25%;
+
+    padding-top: 2em;
+    padding-left: 2em;
+}
+
+.artigo {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+}
+
+.artigo>h2 {
+    margin-bottom: 0px;
+}
+
+.paginacao {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    font-size: 18px;
+}
+

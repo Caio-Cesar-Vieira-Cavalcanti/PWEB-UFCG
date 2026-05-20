@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercício 02</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function encontrarMaior() {
+            let numeros = document.getElementById("txtNumeros").value;
+            numeros = numeros.split(",");
+            let maior = parseInt(numeros[0]);
+            for(let i = 1; i < numeros.length; i++) {
+                let numeroAtual = parseInt(numeros[i]);
+                if(numeroAtual > maior) maior = numeroAtual;
+            }
+            document.write("O maior número da lista [" + numeros + "] é " + maior);
+        }
+    </script>
+  </head>
+
+  <body>
+    Números: <input type="text" id="txtNumeros" />
+
+    <input type="button" value="Encontre o maior!" onclick="encontrarMaior()" />
+
+  </body>
+
+</html>

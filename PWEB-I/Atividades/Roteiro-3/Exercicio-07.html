@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercício 07</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function somar() {
+            let entrada = document.getElementById("txtNumeros").value;
+            let lista = entrada.split(",");
+
+            let soma = 0;
+            for (let i = 0; i < lista.length; i++) {
+                let numero = parseInt(lista[i]);
+                if(numero % 2 !== 0 && numero % 3 === 0) {
+                    soma += numero;
+                }
+            }
+            document.write("A soma de todos os números ímpares e múltiplos de três é: " + soma);
+        }
+    </script>
+  </head>
+
+  <body>
+    Números: <input type="text" id="txtNumeros" />
+
+    <input type="button" value="Somar números!" onclick="somar()" />
+
+  </body>
+
+</html>

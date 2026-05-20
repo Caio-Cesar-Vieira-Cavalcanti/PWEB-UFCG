@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercício 03</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function verificarIdadesMaiorMenorDe18() {
+            let idades = document.getElementById("txtIdades").value;
+            idades = idades.split(",");
+            let maiorDe18 = 0;
+            let menorDe18 = 0;
+            for(let i = 0; i < idades.length; i++) {
+                let idadeAtual = parseInt(idades[i]);
+                if(idadeAtual >= 18) maiorDe18++;
+                else menorDe18++;
+            }
+            document.write("Número de pessoas maiores de 18 anos: " + maiorDe18 + "<br>");
+            document.write("Número de pessoas menores de 18 anos: " + menorDe18);
+        }
+    </script>
+  </head>
+
+  <body>
+    Idades: <input type="text" id="txtIdades" />
+
+    <input type="button" value="Verificar idades!" onclick="verificarIdadesMaiorMenorDe18()" />
+
+  </body>
+
+</html>

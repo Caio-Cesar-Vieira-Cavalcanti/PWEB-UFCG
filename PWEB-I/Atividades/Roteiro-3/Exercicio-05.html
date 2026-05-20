@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercício 05</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function inverterTexto() {
+            let texto = document.getElementById("txtTexto").value;
+            let resultado = "";
+            for(let i = texto.length - 1; i >= 0; i--) {
+                resultado += texto[i];
+            }
+            document.write("Texto invertido: " + resultado);
+        }
+    </script>
+  </head>
+
+  <body>
+    Texto: <input type="text" id="txtTexto" />
+
+    <input type="button" value="Inverter texto!" onclick="inverterTexto()" />
+
+  </body>
+
+</html>

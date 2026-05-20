@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercício 10</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function inverterLista() {
+            let entrada = document.getElementById("txtLista").value;
+            let lista = entrada.split(",");
+            lista.reverse();
+            document.write("A lista original: [" + entrada + "] <br>");
+            document.write("A lista invertida: [" + lista + "]");
+        }
+    </script>
+  </head>
+
+  <body>
+    Lista: <input type="text" id="txtLista" />
+
+    <input type="button" value="Inverter lista!" onclick="inverterLista()" />
+
+  </body>
+
+</html>
