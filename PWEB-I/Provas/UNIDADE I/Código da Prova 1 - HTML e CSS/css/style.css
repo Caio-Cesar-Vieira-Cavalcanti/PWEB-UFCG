@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* HEADER */
+
+header {
+    background-color: #222;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CARRINHO */
+
+.carrinho img {
+    width: 40px;
+}
+
+/* PRODUTOS */
+
+.produtos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 1rem;
+
+    padding: 2rem;
+}
+
+.produto-card {
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    position: relative;
+}
+
+.produto-card img {
+    width: 100%;
+    max-width: 200px;
+}
+
+.promocao::before {
+    content: "PROMOÇÃO";
+
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    background-color: red;
+    color: white;
+
+    padding: 0.3rem 0.6rem;
+
+    border-radius: 5px;
+
+    font-size: 0.8rem;
+}
+
+/* BOTÃO */
+
+button {
+    background-color: #0077cc;
+    color: white;
+
+    border: none;
+
+    padding: 0.8rem 1rem;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 1rem;
+}
+
+/* 
+Alterar ambos códigos CSS para o padrão BEM
+
+Estrutura mental do BEM
+    Tipo	Exemplo
+    Block	produto-card
+    Element	produto-card__titulo
+    Modifier	produto-card--promocao
+*/
