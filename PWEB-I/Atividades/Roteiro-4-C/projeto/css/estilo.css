@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#carrinho-icon {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: white;
+    color: #2c3e50;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#carrinho {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1em;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em 1em;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-bottom: 2.5em;
+}
+
+.book {
+    border: 1px solid #ddd;
+    padding: 1.25em;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+.book p {
+    margin: 0.3em 0;
+    color: #666;
+}
+
+.book button, #btn-esvaziar, #btn-localizar {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    margin-top: 0.5em;
+}
+
+.book button:hover, #btn-esvaziar:hover, #btn-localizar:hover {
+    background-color: #1f618d;
+}
+
+/* Container de entrega organizado lado a lado */
+.entrega-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+@media (min-width: 768px) {
+    .entrega-container {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+.entrega-form {
+    background-color: #fff;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.6em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#map {
+    height: 350px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 1;
+}
+
+/* Card de custo de entrega */
+.custo-card {
+    background-color: #ebf5fb;
+    border: 1px solid #aed6f1;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-top: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.custo-card h3 {
+    margin-top: 0;
+    color: #2471a3;
+    border-bottom: 1px solid #d4e6f1;
+    padding-bottom: 0.5em;
+}
+
+#custo-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.custo-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.1em;
+}
+
+.custo-label {
+    font-weight: normal;
+    color: #4a5568;
+}
+
+.custo-valor {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.custo-valor.destaque {
+    color: #cb4335;
+    font-size: 1.25em;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5em;
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    margin-top: 3em;
+}
