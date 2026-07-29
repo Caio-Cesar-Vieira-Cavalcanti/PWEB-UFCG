@@ -24,7 +24,6 @@ import MDBadge from "components/MDBadge";
 // Images
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
 
 export default function data() {
   const Aluno = ({ image, name, email }) => (
@@ -53,60 +52,41 @@ export default function data() {
       { Header: "aluno", accessor: "aluno", width: "45%", align: "left" },
       { Header: "função", accessor: "funcao", align: "left" },
       { Header: "status", accessor: "status", align: "center" },
-      { Header: "data de Nascimento", accessor: "data_nascimento", align: "center" },
+      { Header: "ingresso ao projeto", accessor: "ingresso_ao_projeto", align: "center" },
       { Header: "ação", accessor: "acao", align: "center" },
     ],
 
     rows: [
       {
-        aluno: <Aluno image={team2} name="Aluno 1" email="aluno1@pw.com.br" />,
-        funcao: <Funcao title="Líder" description="UFCG" />,
-        status: (
-          <MDBox ml={-1}>
-            <MDBadge badgeContent="desativado" color="dark" variant="gradient" size="sm" />
-          </MDBox>
-        ),
-        data_nascimento: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            12/10/2003
-          </MDTypography>
-        ),
-        acao: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
-          </MDTypography>
-        ),
-      },
-      {
-        aluno: <Aluno image={team3} name="Aluno 2" email="aluno2@pw.com.br" />,
-        funcao: <Funcao title="Desenvolvedor Back-end" description="UFCG" />,
-        status: (
-          <MDBox ml={-1}>
-            <MDBadge badgeContent="ativo" color="sucess" variant="gradient" size="sm" />
-          </MDBox>
-        ),
-        data_nascimento: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            03/11/2002
-          </MDTypography>
-        ),
-        acao: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
-          </MDTypography>
-        ),
-      },
-      {
-        aluno: <Aluno image={team4} name="Aluno 3" email="aluno3@pw.com.br" />,
+        aluno: <Aluno image={team2} name="Caio Cesar" email="aluno1@pw.com.br" />,
         funcao: <Funcao title="Desenvolvedor Front-end" description="UFCG" />,
         status: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="ativo" color="sucess" variant="gradient" size="sm" />
           </MDBox>
         ),
-        data_nascimento: (
+        ingresso_ao_projeto: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            15/05/2004
+            16/07/2026
+          </MDTypography>
+        ),
+        acao: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            Edit
+          </MDTypography>
+        ),
+      },
+      {
+        aluno: <Aluno image={team3} name="Matheus Galdino" email="aluno2@pw.com.br" />,
+        funcao: <Funcao title="Desenvolvedor Front-end" description="UFCG" />,
+        status: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="ativo" color="sucess" variant="gradient" size="sm" />
+          </MDBox>
+        ),
+        ingresso_ao_projeto: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            16/07/2026
           </MDTypography>
         ),
         acao: (
